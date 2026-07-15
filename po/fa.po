@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: byedpi-gtk\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-15 00:00+0000\n"
+"Last-Translator: duckesteles\n"
+"Language-Team: Persian\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+msgid "ciadpi binary not found"
+msgstr "فایل اجرایی ciadpi یافت نشد"
+
+msgid "Invalid arguments: {}"
+msgstr "آرگومان‌های نامعتبر: {}"
+
+msgid "Timed out waiting for proxy port"
+msgstr "زمان انتظار برای درگاه پروکسی به پایان رسید"
+
+msgid "Settings"
+msgstr "تنظیمات"
+
+msgid "Appearance"
+msgstr "ظاهر"
+
+msgid "Theme"
+msgstr "زمینه"
+
+msgid "Follow system"
+msgstr "پیروی از سیستم"
+
+msgid "Light"
+msgstr "روشن"
+
+msgid "Dark"
+msgstr "تیره"
+
+msgid "Language"
+msgstr "زبان"
+
+msgid "Proxy"
+msgstr "پروکسی"
+
+msgid "Local SOCKS5 endpoint exposed by byedpi."
+msgstr "نقطهٔ پایانی محلی SOCKS5 که توسط byedpi ارائه می‌شود."
+
+msgid "Listen address"
+msgstr "نشانی شنود"
+
+msgid "Port"
+msgstr "درگاه"
+
+msgid "byedpi arguments"
+msgstr "آرگومان‌های byedpi"
+
+msgid "Behavior"
+msgstr "رفتار"
+
+msgid "Connect on launch"
+msgstr "اتصال هنگام راه‌اندازی"
+
+msgid "Start the proxy automatically when the app opens."
+msgstr "هنگام باز شدن برنامه، پروکسی به‌طور خودکار شروع شود."
+
+msgid "Show tray icon"
+msgstr "نمایش نماد سینی"
+
+msgid "Requires a restart to take effect."
+msgstr "برای اعمال شدن، راه‌اندازی مجدد لازم است."
+
+msgid "Close to tray"
+msgstr "بستن به سینی"
+
+msgid "Keep running in the tray when the window is closed."
+msgstr "هنگام بستن پنجره، در سینی به کار ادامه بده."
+
+msgid "Updates"
+msgstr "به‌روزرسانی‌ها"
+
+msgid "Checks run at startup over HTTPS. Nothing else is sent."
+msgstr "بررسی‌ها هنگام راه‌اندازی از طریق HTTPS انجام می‌شوند. چیز دیگری ارسال نمی‌شود."
+
+msgid "Check for application updates"
+msgstr "بررسی به‌روزرسانی‌های برنامه"
+
+msgid "Keep byedpi core up to date"
+msgstr "هستهٔ byedpi را به‌روز نگه دار"
+
+msgid "Downloads the matching build from the byedpi project."
+msgstr "نسخهٔ مناسب را از پروژهٔ byedpi دانلود می‌کند."
+
+msgid "Checking for application updates…"
+msgstr "در حال بررسی به‌روزرسانی‌های برنامه…"
+
+msgid "Checking byedpi core…"
+msgstr "در حال بررسی هستهٔ byedpi…"
+
+msgid "No byedpi core build for this architecture."
+msgstr "برای این معماری نسخهٔ هستهٔ byedpi وجود ندارد."
+
+msgid "Could not download the byedpi core."
+msgstr "دانلود هستهٔ byedpi ممکن نشد."
+
+msgid "Downloading byedpi core {}…"
+msgstr "در حال دانلود هستهٔ byedpi {}…"
+
+msgid "Starting…"
+msgstr "در حال شروع…"
+
+msgid "Main Menu"
+msgstr "منوی اصلی"
+
+msgid "About byedpi-gtk"
+msgstr "دربارهٔ byedpi-gtk"
+
+msgid "Quit"
+msgstr "خروج"
+
+msgid "Hide"
+msgstr "پنهان کردن"
+
+msgid "Show"
+msgstr "نمایش"
+
+msgid "Disconnect"
+msgstr "قطع اتصال"
+
+msgid "Connect"
+msgstr "اتصال"
+
+msgid "A new version of byedpi-gtk is available: {}"
+msgstr "نسخهٔ جدیدی از byedpi-gtk در دسترس است: {}"
+
+msgid "byedpi core updated to {}"
+msgstr "هستهٔ byedpi به {} به‌روزرسانی شد"
+
+msgid "Could not start the proxy. Check the settings."
+msgstr "پروکسی شروع نشد. تنظیمات را بررسی کنید."
+
+msgid "Connecting…"
+msgstr "در حال اتصال…"
+
+msgid "Connected"
+msgstr "متصل شد"
+
+msgid "Disconnecting…"
+msgstr "در حال قطع اتصال…"
+
+msgid "Connection failed"
+msgstr "اتصال ناموفق بود"
+
+msgid "Disconnected"
+msgstr "قطع شد"

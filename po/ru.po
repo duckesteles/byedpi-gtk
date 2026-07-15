@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: byedpi-gtk\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-15 00:00+0000\n"
+"Last-Translator: duckesteles\n"
+"Language-Team: Russian\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "ciadpi binary not found"
+msgstr "Двоичный файл ciadpi не найден"
+
+msgid "Invalid arguments: {}"
+msgstr "Недопустимые аргументы: {}"
+
+msgid "Timed out waiting for proxy port"
+msgstr "Истекло время ожидания порта прокси"
+
+msgid "Settings"
+msgstr "Настройки"
+
+msgid "Appearance"
+msgstr "Внешний вид"
+
+msgid "Theme"
+msgstr "Тема"
+
+msgid "Follow system"
+msgstr "Как в системе"
+
+msgid "Light"
+msgstr "Светлая"
+
+msgid "Dark"
+msgstr "Тёмная"
+
+msgid "Language"
+msgstr "Язык"
+
+msgid "Proxy"
+msgstr "Прокси"
+
+msgid "Local SOCKS5 endpoint exposed by byedpi."
+msgstr "Локальная точка SOCKS5, предоставляемая byedpi."
+
+msgid "Listen address"
+msgstr "Адрес прослушивания"
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "byedpi arguments"
+msgstr "Аргументы byedpi"
+
+msgid "Behavior"
+msgstr "Поведение"
+
+msgid "Connect on launch"
+msgstr "Подключаться при запуске"
+
+msgid "Start the proxy automatically when the app opens."
+msgstr "Автоматически запускать прокси при открытии приложения."
+
+msgid "Show tray icon"
+msgstr "Показывать значок в трее"
+
+msgid "Requires a restart to take effect."
+msgstr "Вступает в силу после перезапуска."
+
+msgid "Close to tray"
+msgstr "Сворачивать в трей"
+
+msgid "Keep running in the tray when the window is closed."
+msgstr "Продолжать работу в трее при закрытии окна."
+
+msgid "Updates"
+msgstr "Обновления"
+
+msgid "Checks run at startup over HTTPS. Nothing else is sent."
+msgstr "Проверки выполняются при запуске по HTTPS. Больше ничего не отправляется."
+
+msgid "Check for application updates"
+msgstr "Проверять обновления приложения"
+
+msgid "Keep byedpi core up to date"
+msgstr "Обновлять ядро byedpi"
+
+msgid "Downloads the matching build from the byedpi project."
+msgstr "Загружает подходящую сборку из проекта byedpi."
+
+msgid "Checking for application updates…"
+msgstr "Проверка обновлений приложения…"
+
+msgid "Checking byedpi core…"
+msgstr "Проверка ядра byedpi…"
+
+msgid "No byedpi core build for this architecture."
+msgstr "Нет сборки ядра byedpi для этой архитектуры."
+
+msgid "Could not download the byedpi core."
+msgstr "Не удалось загрузить ядро byedpi."
+
+msgid "Downloading byedpi core {}…"
+msgstr "Загрузка ядра byedpi {}…"
+
+msgid "Starting…"
+msgstr "Запуск…"
+
+msgid "Main Menu"
+msgstr "Главное меню"
+
+msgid "About byedpi-gtk"
+msgstr "О byedpi-gtk"
+
+msgid "Quit"
+msgstr "Выйти"
+
+msgid "Hide"
+msgstr "Скрыть"
+
+msgid "Show"
+msgstr "Показать"
+
+msgid "Disconnect"
+msgstr "Отключить"
+
+msgid "Connect"
+msgstr "Подключить"
+
+msgid "A new version of byedpi-gtk is available: {}"
+msgstr "Доступна новая версия byedpi-gtk: {}"
+
+msgid "byedpi core updated to {}"
+msgstr "Ядро byedpi обновлено до {}"
+
+msgid "Could not start the proxy. Check the settings."
+msgstr "Не удалось запустить прокси. Проверьте настройки."
+
+msgid "Connecting…"
+msgstr "Подключение…"
+
+msgid "Connected"
+msgstr "Подключено"
+
+msgid "Disconnecting…"
+msgstr "Отключение…"
+
+msgid "Connection failed"
+msgstr "Не удалось подключиться"
+
+msgid "Disconnected"
+msgstr "Отключено"

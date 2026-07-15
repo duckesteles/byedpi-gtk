@@ -2,6 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: byedpi-gtk\n"
 "Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-15 17:45+0300\n"
 "PO-Revision-Date: 2026-07-15 00:00+0000\n"
 "Last-Translator: duckesteles\n"
 "Language-Team: Turkish\n"
@@ -11,167 +12,201 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: src/byedpi_gtk/ciadpi.py:77
 msgid "ciadpi binary not found"
 msgstr "ciadpi ikili dosyası bulunamadı"
 
+#: src/byedpi_gtk/ciadpi.py:86
+#, python-brace-format
 msgid "Invalid arguments: {}"
 msgstr "Geçersiz argümanlar: {}"
 
+#: src/byedpi_gtk/ciadpi.py:138
 msgid "Timed out waiting for proxy port"
 msgstr "Proxy bağlantı noktası beklenirken zaman aşımına uğradı"
 
+#: src/byedpi_gtk/settings.py:16 src/byedpi_gtk/window.py:71
+#: src/byedpi_gtk/window.py:324
 msgid "Settings"
 msgstr "Ayarlar"
 
+#: src/byedpi_gtk/settings.py:30
 msgid "Appearance"
 msgstr "Görünüm"
 
+#: src/byedpi_gtk/settings.py:32
 msgid "Theme"
 msgstr "Tema"
 
+#: src/byedpi_gtk/settings.py:35 src/byedpi_gtk/settings.py:56
 msgid "Follow system"
 msgstr "Sistemi izle"
 
+#: src/byedpi_gtk/settings.py:35
 msgid "Light"
 msgstr "Aydınlık"
 
+#: src/byedpi_gtk/settings.py:35
 msgid "Dark"
 msgstr "Karanlık"
 
+#: src/byedpi_gtk/settings.py:52
 msgid "Language"
 msgstr "Dil"
 
-msgid "Restart to fully apply a new language."
-msgstr "Yeni dilin tümüyle uygulanması için yeniden başlatın."
-
+#: src/byedpi_gtk/settings.py:75
 msgid "Proxy"
 msgstr "Proxy"
 
+#: src/byedpi_gtk/settings.py:76
 msgid "Local SOCKS5 endpoint exposed by byedpi."
 msgstr "byedpi tarafından sunulan yerel SOCKS5 uç noktası."
 
+#: src/byedpi_gtk/settings.py:79
 msgid "Listen address"
 msgstr "Dinleme adresi"
 
+#: src/byedpi_gtk/settings.py:88
 msgid "Port"
 msgstr "Bağlantı noktası"
 
+#: src/byedpi_gtk/settings.py:98
 msgid "byedpi arguments"
 msgstr "byedpi argümanları"
 
-msgid "Connect on launch"
-msgstr "Açılışta bağlan"
-
-msgid "Start the proxy automatically when the app opens."
-msgstr "Uygulama açıldığında proxy'yi otomatik olarak başlat."
-
-msgid "Updates"
-msgstr "Güncellemeler"
-
-msgid "Checks run at startup over HTTPS. Nothing else is sent."
-msgstr "Denetimler açılışta HTTPS üzerinden yapılır. Başka hiçbir şey gönderilmez."
-
-msgid "Check for application updates"
-msgstr "Uygulama güncellemelerini denetle"
-
-msgid "Keep byedpi core up to date"
-msgstr "byedpi çekirdeğini güncel tut"
-
-msgid "Downloads the matching build from the byedpi project."
-msgstr "byedpi projesinden uygun yapıyı indirir."
-
-msgid "Checking for application updates…"
-msgstr "Uygulama güncellemeleri denetleniyor…"
-
-msgid "Could not check application updates."
-msgstr "Uygulama güncellemeleri denetlenemedi."
-
-msgid "Checking byedpi core…"
-msgstr "byedpi çekirdeği denetleniyor…"
-
-msgid "Unsupported architecture for automatic core updates."
-msgstr "Otomatik çekirdek güncellemeleri için desteklenmeyen mimari."
-
-msgid "Could not check byedpi core updates."
-msgstr "byedpi çekirdek güncellemeleri denetlenemedi."
-
-msgid "No byedpi core build for this architecture."
-msgstr "Bu mimari için byedpi çekirdek yapısı yok."
-
-msgid "Downloading byedpi core {}…"
-msgstr "byedpi çekirdeği indiriliyor {}…"
-
-msgid "Failed to install byedpi core: {}"
-msgstr "byedpi çekirdeği kurulamadı: {}"
-
-msgid "Starting…"
-msgstr "Başlatılıyor…"
-
-msgid "About byedpi-gtk"
-msgstr "byedpi-gtk Hakkında"
-
-msgid "Quit"
-msgstr "Çıkış"
-
-msgid "Main Menu"
-msgstr "Ana Menü"
-
-msgid "Disconnected"
-msgstr "Bağlantı kesildi"
-
-msgid "Connect"
-msgstr "Bağlan"
-
-msgid "A new version of byedpi-gtk is available: {}"
-msgstr "byedpi-gtk'nın yeni bir sürümü mevcut: {}"
-
-msgid "byedpi core updated to {}"
-msgstr "byedpi çekirdeği {} sürümüne güncellendi"
-
-msgid "Connecting…"
-msgstr "Bağlanılıyor…"
-
-msgid "Connected"
-msgstr "Bağlandı"
-
-msgid "Disconnect"
-msgstr "Bağlantıyı kes"
-
-msgid "Disconnecting…"
-msgstr "Bağlantı kesiliyor…"
-
-msgid "Connection failed"
-msgstr "Bağlantı başarısız"
-
-msgid "Could not start the proxy. Check the settings."
-msgstr "Proxy başlatılamadı. Ayarları denetleyin."
-
+#: src/byedpi_gtk/settings.py:108
 msgid "Behavior"
 msgstr "Davranış"
 
+#: src/byedpi_gtk/settings.py:111
+msgid "Connect on launch"
+msgstr "Açılışta bağlan"
+
+#: src/byedpi_gtk/settings.py:112
+msgid "Start the proxy automatically when the app opens."
+msgstr "Uygulama açıldığında proxy'yi otomatik olarak başlat."
+
+#: src/byedpi_gtk/settings.py:124
 msgid "Show tray icon"
 msgstr "Tepsi ikonunu göster"
 
+#: src/byedpi_gtk/settings.py:125
 msgid "Requires a restart to take effect."
 msgstr "Etkili olması için yeniden başlatma gerekir."
 
+#: src/byedpi_gtk/settings.py:135
 msgid "Close to tray"
 msgstr "Tepsiye küçült"
 
+#: src/byedpi_gtk/settings.py:136
 msgid "Keep running in the tray when the window is closed."
 msgstr "Pencere kapatıldığında tepside çalışmaya devam et."
 
-msgid "Logs"
-msgstr "Günlükler"
+#: src/byedpi_gtk/settings.py:148
+msgid "Updates"
+msgstr "Güncellemeler"
 
-msgid "Clear logs"
-msgstr "Günlükleri temizle"
+#: src/byedpi_gtk/settings.py:150
+msgid "Checks run at startup over HTTPS. Nothing else is sent."
+msgstr ""
+"Denetimler açılışta HTTPS üzerinden yapılır. Başka hiçbir şey gönderilmez."
 
-msgid "Show"
-msgstr "Göster"
+#: src/byedpi_gtk/settings.py:154
+msgid "Check for application updates"
+msgstr "Uygulama güncellemelerini denetle"
 
+#: src/byedpi_gtk/settings.py:165
+msgid "Keep byedpi core up to date"
+msgstr "byedpi çekirdeğini güncel tut"
+
+#: src/byedpi_gtk/settings.py:166
+msgid "Downloads the matching build from the byedpi project."
+msgstr "byedpi projesinden uygun yapıyı indirir."
+
+#: src/byedpi_gtk/updater.py:161
+msgid "Checking for application updates…"
+msgstr "Uygulama güncellemeleri denetleniyor…"
+
+#: src/byedpi_gtk/updater.py:178
+msgid "Checking byedpi core…"
+msgstr "byedpi çekirdeği denetleniyor…"
+
+#: src/byedpi_gtk/updater.py:183 src/byedpi_gtk/updater.py:201
+msgid "No byedpi core build for this architecture."
+msgstr "Bu mimari için byedpi çekirdek yapısı yok."
+
+#: src/byedpi_gtk/updater.py:190 src/byedpi_gtk/updater.py:213
+msgid "Could not download the byedpi core."
+msgstr "byedpi çekirdeği indirilemedi."
+
+#: src/byedpi_gtk/updater.py:204
+#, python-brace-format
+msgid "Downloading byedpi core {}…"
+msgstr "byedpi çekirdeği indiriliyor {}…"
+
+#: src/byedpi_gtk/window.py:53 src/byedpi_gtk/window.py:321
+msgid "Starting…"
+msgstr "Başlatılıyor…"
+
+#: src/byedpi_gtk/window.py:66 src/byedpi_gtk/window.py:322
+msgid "Main Menu"
+msgstr "Ana Menü"
+
+#: src/byedpi_gtk/window.py:119
+msgid "About byedpi-gtk"
+msgstr "byedpi-gtk Hakkında"
+
+#: src/byedpi_gtk/window.py:120 src/byedpi_gtk/window.py:201
+msgid "Quit"
+msgstr "Çıkış"
+
+#: src/byedpi_gtk/window.py:192
 msgid "Hide"
 msgstr "Gizle"
 
-msgid "Could not download the byedpi core."
-msgstr "byedpi çekirdeği indirilemedi."
+#: src/byedpi_gtk/window.py:192
+msgid "Show"
+msgstr "Göster"
+
+#: src/byedpi_gtk/window.py:197 src/byedpi_gtk/window.py:297
+msgid "Disconnect"
+msgstr "Bağlantıyı kes"
+
+#: src/byedpi_gtk/window.py:197 src/byedpi_gtk/window.py:292
+#: src/byedpi_gtk/window.py:314
+msgid "Connect"
+msgstr "Bağlan"
+
+#: src/byedpi_gtk/window.py:247
+#, python-brace-format
+msgid "A new version of byedpi-gtk is available: {}"
+msgstr "byedpi-gtk'nın yeni bir sürümü mevcut: {}"
+
+#: src/byedpi_gtk/window.py:253
+#, python-brace-format
+msgid "byedpi core updated to {}"
+msgstr "byedpi çekirdeği {} sürümüne güncellendi"
+
+#: src/byedpi_gtk/window.py:285
+msgid "Could not start the proxy. Check the settings."
+msgstr "Proxy başlatılamadı. Ayarları denetleyin."
+
+#: src/byedpi_gtk/window.py:290
+msgid "Connecting…"
+msgstr "Bağlanılıyor…"
+
+#: src/byedpi_gtk/window.py:295
+msgid "Connected"
+msgstr "Bağlandı"
+
+#: src/byedpi_gtk/window.py:302
+msgid "Disconnecting…"
+msgstr "Bağlantı kesiliyor…"
+
+#: src/byedpi_gtk/window.py:305
+msgid "Connection failed"
+msgstr "Bağlantı başarısız"
+
+#: src/byedpi_gtk/window.py:309
+msgid "Disconnected"
+msgstr "Bağlantı kesildi"

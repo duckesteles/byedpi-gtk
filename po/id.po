@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: byedpi-gtk\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-15 00:00+0000\n"
+"Last-Translator: duckesteles\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "ciadpi binary not found"
+msgstr "Berkas biner ciadpi tidak ditemukan"
+
+msgid "Invalid arguments: {}"
+msgstr "Argumen tidak valid: {}"
+
+msgid "Timed out waiting for proxy port"
+msgstr "Waktu habis menunggu porta proxy"
+
+msgid "Settings"
+msgstr "Pengaturan"
+
+msgid "Appearance"
+msgstr "Tampilan"
+
+msgid "Theme"
+msgstr "Tema"
+
+msgid "Follow system"
+msgstr "Ikuti sistem"
+
+msgid "Light"
+msgstr "Terang"
+
+msgid "Dark"
+msgstr "Gelap"
+
+msgid "Language"
+msgstr "Bahasa"
+
+msgid "Proxy"
+msgstr "Proxy"
+
+msgid "Local SOCKS5 endpoint exposed by byedpi."
+msgstr "Titik akhir SOCKS5 lokal yang disediakan oleh byedpi."
+
+msgid "Listen address"
+msgstr "Alamat dengar"
+
+msgid "Port"
+msgstr "Porta"
+
+msgid "byedpi arguments"
+msgstr "Argumen byedpi"
+
+msgid "Behavior"
+msgstr "Perilaku"
+
+msgid "Connect on launch"
+msgstr "Sambungkan saat diluncurkan"
+
+msgid "Start the proxy automatically when the app opens."
+msgstr "Mulai proxy secara otomatis saat aplikasi dibuka."
+
+msgid "Show tray icon"
+msgstr "Tampilkan ikon baki"
+
+msgid "Requires a restart to take effect."
+msgstr "Perlu mulai ulang agar berlaku."
+
+msgid "Close to tray"
+msgstr "Tutup ke baki"
+
+msgid "Keep running in the tray when the window is closed."
+msgstr "Tetap berjalan di baki saat jendela ditutup."
+
+msgid "Updates"
+msgstr "Pembaruan"
+
+msgid "Checks run at startup over HTTPS. Nothing else is sent."
+msgstr "Pemeriksaan berjalan saat memulai melalui HTTPS. Tidak ada hal lain yang dikirim."
+
+msgid "Check for application updates"
+msgstr "Periksa pembaruan aplikasi"
+
+msgid "Keep byedpi core up to date"
+msgstr "Jaga inti byedpi tetap terbaru"
+
+msgid "Downloads the matching build from the byedpi project."
+msgstr "Mengunduh build yang sesuai dari proyek byedpi."
+
+msgid "Checking for application updates…"
+msgstr "Memeriksa pembaruan aplikasi…"
+
+msgid "Checking byedpi core…"
+msgstr "Memeriksa inti byedpi…"
+
+msgid "No byedpi core build for this architecture."
+msgstr "Tidak ada build inti byedpi untuk arsitektur ini."
+
+msgid "Could not download the byedpi core."
+msgstr "Tidak dapat mengunduh inti byedpi."
+
+msgid "Downloading byedpi core {}…"
+msgstr "Mengunduh inti byedpi {}…"
+
+msgid "Starting…"
+msgstr "Memulai…"
+
+msgid "Main Menu"
+msgstr "Menu Utama"
+
+msgid "About byedpi-gtk"
+msgstr "Tentang byedpi-gtk"
+
+msgid "Quit"
+msgstr "Keluar"
+
+msgid "Hide"
+msgstr "Sembunyikan"
+
+msgid "Show"
+msgstr "Tampilkan"
+
+msgid "Disconnect"
+msgstr "Putuskan"
+
+msgid "Connect"
+msgstr "Sambungkan"
+
+msgid "A new version of byedpi-gtk is available: {}"
+msgstr "Versi baru byedpi-gtk tersedia: {}"
+
+msgid "byedpi core updated to {}"
+msgstr "Inti byedpi diperbarui ke {}"
+
+msgid "Could not start the proxy. Check the settings."
+msgstr "Tidak dapat memulai proxy. Periksa pengaturan."
+
+msgid "Connecting…"
+msgstr "Menyambungkan…"
+
+msgid "Connected"
+msgstr "Tersambung"
+
+msgid "Disconnecting…"
+msgstr "Memutuskan…"
+
+msgid "Connection failed"
+msgstr "Sambungan gagal"
+
+msgid "Disconnected"
+msgstr "Terputus"

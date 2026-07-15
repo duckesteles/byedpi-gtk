@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: byedpi-gtk\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-15 00:00+0000\n"
+"Last-Translator: duckesteles\n"
+"Language-Team: Vietnamese\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "ciadpi binary not found"
+msgstr "Không tìm thấy tệp thực thi ciadpi"
+
+msgid "Invalid arguments: {}"
+msgstr "Đối số không hợp lệ: {}"
+
+msgid "Timed out waiting for proxy port"
+msgstr "Hết thời gian chờ cổng proxy"
+
+msgid "Settings"
+msgstr "Cài đặt"
+
+msgid "Appearance"
+msgstr "Giao diện"
+
+msgid "Theme"
+msgstr "Chủ đề"
+
+msgid "Follow system"
+msgstr "Theo hệ thống"
+
+msgid "Light"
+msgstr "Sáng"
+
+msgid "Dark"
+msgstr "Tối"
+
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+msgid "Proxy"
+msgstr "Proxy"
+
+msgid "Local SOCKS5 endpoint exposed by byedpi."
+msgstr "Điểm cuối SOCKS5 cục bộ do byedpi cung cấp."
+
+msgid "Listen address"
+msgstr "Địa chỉ lắng nghe"
+
+msgid "Port"
+msgstr "Cổng"
+
+msgid "byedpi arguments"
+msgstr "Đối số byedpi"
+
+msgid "Behavior"
+msgstr "Hành vi"
+
+msgid "Connect on launch"
+msgstr "Kết nối khi khởi động"
+
+msgid "Start the proxy automatically when the app opens."
+msgstr "Tự động khởi động proxy khi mở ứng dụng."
+
+msgid "Show tray icon"
+msgstr "Hiện biểu tượng khay"
+
+msgid "Requires a restart to take effect."
+msgstr "Cần khởi động lại để có hiệu lực."
+
+msgid "Close to tray"
+msgstr "Đóng vào khay"
+
+msgid "Keep running in the tray when the window is closed."
+msgstr "Tiếp tục chạy trong khay khi đóng cửa sổ."
+
+msgid "Updates"
+msgstr "Cập nhật"
+
+msgid "Checks run at startup over HTTPS. Nothing else is sent."
+msgstr "Việc kiểm tra chạy khi khởi động qua HTTPS. Không có gì khác được gửi đi."
+
+msgid "Check for application updates"
+msgstr "Kiểm tra cập nhật ứng dụng"
+
+msgid "Keep byedpi core up to date"
+msgstr "Luôn cập nhật lõi byedpi"
+
+msgid "Downloads the matching build from the byedpi project."
+msgstr "Tải bản dựng phù hợp từ dự án byedpi."
+
+msgid "Checking for application updates…"
+msgstr "Đang kiểm tra cập nhật ứng dụng…"
+
+msgid "Checking byedpi core…"
+msgstr "Đang kiểm tra lõi byedpi…"
+
+msgid "No byedpi core build for this architecture."
+msgstr "Không có bản dựng lõi byedpi cho kiến trúc này."
+
+msgid "Could not download the byedpi core."
+msgstr "Không thể tải lõi byedpi."
+
+msgid "Downloading byedpi core {}…"
+msgstr "Đang tải lõi byedpi {}…"
+
+msgid "Starting…"
+msgstr "Đang khởi động…"
+
+msgid "Main Menu"
+msgstr "Menu chính"
+
+msgid "About byedpi-gtk"
+msgstr "Giới thiệu byedpi-gtk"
+
+msgid "Quit"
+msgstr "Thoát"
+
+msgid "Hide"
+msgstr "Ẩn"
+
+msgid "Show"
+msgstr "Hiện"
+
+msgid "Disconnect"
+msgstr "Ngắt kết nối"
+
+msgid "Connect"
+msgstr "Kết nối"
+
+msgid "A new version of byedpi-gtk is available: {}"
+msgstr "Đã có phiên bản byedpi-gtk mới: {}"
+
+msgid "byedpi core updated to {}"
+msgstr "Lõi byedpi đã cập nhật lên {}"
+
+msgid "Could not start the proxy. Check the settings."
+msgstr "Không thể khởi động proxy. Hãy kiểm tra cài đặt."
+
+msgid "Connecting…"
+msgstr "Đang kết nối…"
+
+msgid "Connected"
+msgstr "Đã kết nối"
+
+msgid "Disconnecting…"
+msgstr "Đang ngắt kết nối…"
+
+msgid "Connection failed"
+msgstr "Kết nối thất bại"
+
+msgid "Disconnected"
+msgstr "Đã ngắt kết nối"

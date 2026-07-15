@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: byedpi-gtk\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2026-07-15 00:00+0000\n"
+"Last-Translator: duckesteles\n"
+"Language-Team: Chinese (Simplified)\n"
+"Language: zh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "ciadpi binary not found"
+msgstr "未找到 ciadpi 可执行文件"
+
+msgid "Invalid arguments: {}"
+msgstr "参数无效：{}"
+
+msgid "Timed out waiting for proxy port"
+msgstr "等待代理端口超时"
+
+msgid "Settings"
+msgstr "设置"
+
+msgid "Appearance"
+msgstr "外观"
+
+msgid "Theme"
+msgstr "主题"
+
+msgid "Follow system"
+msgstr "跟随系统"
+
+msgid "Light"
+msgstr "浅色"
+
+msgid "Dark"
+msgstr "深色"
+
+msgid "Language"
+msgstr "语言"
+
+msgid "Proxy"
+msgstr "代理"
+
+msgid "Local SOCKS5 endpoint exposed by byedpi."
+msgstr "byedpi 提供的本地 SOCKS5 端点。"
+
+msgid "Listen address"
+msgstr "监听地址"
+
+msgid "Port"
+msgstr "端口"
+
+msgid "byedpi arguments"
+msgstr "byedpi 参数"
+
+msgid "Behavior"
+msgstr "行为"
+
+msgid "Connect on launch"
+msgstr "启动时连接"
+
+msgid "Start the proxy automatically when the app opens."
+msgstr "打开应用时自动启动代理。"
+
+msgid "Show tray icon"
+msgstr "显示托盘图标"
+
+msgid "Requires a restart to take effect."
+msgstr "需要重启才能生效。"
+
+msgid "Close to tray"
+msgstr "关闭到托盘"
+
+msgid "Keep running in the tray when the window is closed."
+msgstr "关闭窗口时在托盘中继续运行。"
+
+msgid "Updates"
+msgstr "更新"
+
+msgid "Checks run at startup over HTTPS. Nothing else is sent."
+msgstr "检查在启动时通过 HTTPS 进行。不会发送其他任何内容。"
+
+msgid "Check for application updates"
+msgstr "检查应用更新"
+
+msgid "Keep byedpi core up to date"
+msgstr "保持 byedpi 内核最新"
+
+msgid "Downloads the matching build from the byedpi project."
+msgstr "从 byedpi 项目下载匹配的构建。"
+
+msgid "Checking for application updates…"
+msgstr "正在检查应用更新…"
+
+msgid "Checking byedpi core…"
+msgstr "正在检查 byedpi 内核…"
+
+msgid "No byedpi core build for this architecture."
+msgstr "没有适用于此架构的 byedpi 内核构建。"
+
+msgid "Could not download the byedpi core."
+msgstr "无法下载 byedpi 内核。"
+
+msgid "Downloading byedpi core {}…"
+msgstr "正在下载 byedpi 内核 {}…"
+
+msgid "Starting…"
+msgstr "正在启动…"
+
+msgid "Main Menu"
+msgstr "主菜单"
+
+msgid "About byedpi-gtk"
+msgstr "关于 byedpi-gtk"
+
+msgid "Quit"
+msgstr "退出"
+
+msgid "Hide"
+msgstr "隐藏"
+
+msgid "Show"
+msgstr "显示"
+
+msgid "Disconnect"
+msgstr "断开连接"
+
+msgid "Connect"
+msgstr "连接"
+
+msgid "A new version of byedpi-gtk is available: {}"
+msgstr "byedpi-gtk 有新版本可用：{}"
+
+msgid "byedpi core updated to {}"
+msgstr "byedpi 内核已更新到 {}"
+
+msgid "Could not start the proxy. Check the settings."
+msgstr "无法启动代理。请检查设置。"
+
+msgid "Connecting…"
+msgstr "正在连接…"
+
+msgid "Connected"
+msgstr "已连接"
+
+msgid "Disconnecting…"
+msgstr "正在断开…"
+
+msgid "Connection failed"
+msgstr "连接失败"
+
+msgid "Disconnected"
+msgstr "已断开"
