@@ -56,11 +56,15 @@ jobs:
 
       - name: Install build dependencies
         run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            meson ninja-build gettext desktop-file-utils \
-            libgtk-4-dev libadwaita-1-dev python3-gi \
-            libfuse2 curl file
+          for attempt in 1 2 3 4 5; do
+            sudo apt-get update -o Acquire::Retries=5 && \
+            sudo apt-get install -y -o Acquire::Retries=5 \
+              meson ninja-build gettext desktop-file-utils \
+              libgtk-4-dev libadwaita-1-dev python3-gi \
+              libfuse2 curl file && break
+            echo "apt attempt $attempt failed, retrying in 30s"
+            sleep 30
+          done
 
       - name: Build AppImage
         run: bash packaging/appimage/build.sh
