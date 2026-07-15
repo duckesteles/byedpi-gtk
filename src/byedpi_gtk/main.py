@@ -62,6 +62,7 @@ class Application(Adw.Application):
         window = self.get_active_window()
         if window is None:
             window = MainWindow(application=self)
+        window.set_visible(True)
         window.present()
 
     def _on_about(self, action, param):

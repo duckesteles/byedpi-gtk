@@ -12,7 +12,7 @@ DEFAULTS = {
     'check_app_updates': True,
     'check_ciadpi_updates': True,
     'show_tray': True,
-    'close_to_tray': True,
+    'close_to_tray': False,
 }
 
 VALID_THEMES = ('system', 'light', 'dark')
