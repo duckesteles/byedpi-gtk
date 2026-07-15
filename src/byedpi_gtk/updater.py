@@ -58,7 +58,7 @@ def _normalize(tag):
     return (tag or '').lstrip('vV').strip()
 
 
-def _target_arch():
+def target_arch():
     machine = platform.machine().lower()
     return ARCH_MAP.get(machine)
 
@@ -167,7 +167,7 @@ class Updater(GObject.Object):
 
     def _sync_ciadpi(self, result):
         self._report(_('Checking byedpi core…'))
-        arch = _target_arch()
+        arch = target_arch()
         result.ciadpi_installed = read_installed_ciadpi_version()
         if arch is None:
             result.messages.append(

@@ -3,6 +3,14 @@ import shlex
 import socket
 from gi.repository import GLib, Gio, GObject
 
+from .updater import target_arch
+
+SYSTEM_LIBDIRS = (
+    '/usr/lib/byedpi-gtk',
+    '/usr/local/lib/byedpi-gtk',
+    '/app/lib/byedpi-gtk',
+)
+
 STATE_STOPPED = 'stopped'
 STATE_STARTING = 'starting'
 STATE_RUNNING = 'running'
@@ -23,6 +31,12 @@ def find_binary():
     bundled = '/app/bin/ciadpi'
     if os.access(bundled, os.X_OK):
         return bundled
+    arch = target_arch()
+    if arch:
+        for libdir in SYSTEM_LIBDIRS:
+            candidate = os.path.join(libdir, 'ciadpi-{}'.format(arch))
+            if os.access(candidate, os.X_OK):
+                return candidate
     return GLib.find_program_in_path('ciadpi')
 
 
