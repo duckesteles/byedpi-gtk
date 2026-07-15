@@ -4,12 +4,25 @@ import sys
 import signal
 import gettext
 
-sys.path.insert(1, '@moduledir@')
-
 VERSION = '@VERSION@'
 APP_ID = '@APP_ID@'
-LOCALEDIR = '@localedir@'
-PKGDATADIR = '@pkgdatadir@'
+BAKED_PREFIX = '@prefix@'
+
+_here = os.path.dirname(os.path.realpath(__file__))
+_prefix = os.path.dirname(_here)
+
+
+def _resolve(baked):
+    if os.path.realpath(_prefix) == os.path.realpath(BAKED_PREFIX):
+        return baked
+    return os.path.join(_prefix, os.path.relpath(baked, BAKED_PREFIX))
+
+
+MODULEDIR = _resolve('@moduledir@')
+LOCALEDIR = _resolve('@localedir@')
+PKGDATADIR = _resolve('@pkgdatadir@')
+
+sys.path.insert(1, os.path.dirname(MODULEDIR))
 
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
