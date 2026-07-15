@@ -33,4 +33,4 @@ jobs:
             exit 0
           fi
           gh issue create --title "$TITLE" --body \
-            "byedpi released $LATEST (pinned: $PINNED). Update packaging/byedpi-upstream.json and build-aux/flatpak manifest."
+            "byedpi released $LATEST (pinned: $PINNED). Update packaging/byedpi-upstream.json, _byedpiver in packaging/aur/PKGBUILD and the build-aux/flatpak manifest."

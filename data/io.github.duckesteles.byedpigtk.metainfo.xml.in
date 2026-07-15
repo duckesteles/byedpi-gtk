@@ -30,6 +30,11 @@
     <category>Security</category>
   </categories>
   <releases>
+    <release version="1.0.1" date="2026-07-15">
+      <description>
+        <p>Universal packages: every CPU architecture ships in one deb and one pacman package, with Flatpak and AppImage builds for x86_64 and aarch64.</p>
+      </description>
+    </release>
     <release version="1.0.0" date="2026-07-15">
       <description>
         <p>Initial release.</p>
