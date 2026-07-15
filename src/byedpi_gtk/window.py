@@ -2,8 +2,12 @@ from gi.repository import Adw, Gio, GLib, Gtk
 
 from . import ciadpi
 from .settings import SettingsDialog
-from .tray import TrayIcon
 from .updater import Updater
+
+try:
+    from .tray import TrayIcon
+except Exception:
+    TrayIcon = None
 
 
 class MainWindow(Adw.ApplicationWindow):
@@ -122,13 +126,16 @@ class MainWindow(Adw.ApplicationWindow):
         )
 
     def _setup_tray(self):
-        if not self.config.get('show_tray'):
+        if not self.config.get('show_tray') or TrayIcon is None:
             return
-        self._tray = TrayIcon(self.app.app_id, 'byedpi-gtk')
-        self._tray.connect('activate', lambda _t: self._toggle_window())
-        self._tray.connect('menu-item', self._on_tray_menu)
-        self._tray.start()
-        self._refresh_tray_menu()
+        try:
+            self._tray = TrayIcon(self.app.app_id, 'byedpi-gtk')
+            self._tray.connect('activate', lambda _t: self._toggle_window())
+            self._tray.connect('menu-item', self._on_tray_menu)
+            self._tray.start()
+            self._refresh_tray_menu()
+        except Exception:
+            self._tray = None
 
     def _refresh_tray_menu(self):
         if self._tray is None:

@@ -31,6 +31,7 @@ sources = [
   'byedpi_gtk/ciadpi.py',
   'byedpi_gtk/updater.py',
   'byedpi_gtk/i18n.py',
+  'byedpi_gtk/tray.py',
 ]
 
 install_data(sources, install_dir: moduledir)
