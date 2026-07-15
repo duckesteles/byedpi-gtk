@@ -15,6 +15,7 @@ ITEM_XML = '''
     <property name="Title" type="s" access="read"/>
     <property name="Status" type="s" access="read"/>
     <property name="IconName" type="s" access="read"/>
+    <property name="IconPixmap" type="a(iiay)" access="read"/>
     <property name="Menu" type="o" access="read"/>
     <property name="ItemIsMenu" type="b" access="read"/>
     <method name="Activate">
@@ -93,6 +94,7 @@ class TrayIcon(GObject.Object):
         self._app_id = app_id
         self._title = title
         self._icon_name = app_id
+        self._icon_pixmap = []
         self._object_path = '/StatusNotifierItem'
         self._menu_path = '/MenuBar'
         self._items = []
@@ -115,6 +117,13 @@ class TrayIcon(GObject.Object):
 
     def set_icon(self, icon_name):
         self._icon_name = icon_name
+        if self._bus is not None:
+            self._bus.emit_signal(
+                None, self._object_path, SNI_IFACE, 'NewIcon', None
+            )
+
+    def set_icon_pixmap(self, pixmaps):
+        self._icon_pixmap = pixmaps
         if self._bus is not None:
             self._bus.emit_signal(
                 None, self._object_path, SNI_IFACE, 'NewIcon', None
@@ -187,6 +196,7 @@ class TrayIcon(GObject.Object):
             'Title': GLib.Variant('s', self._title),
             'Status': GLib.Variant('s', 'Active'),
             'IconName': GLib.Variant('s', self._icon_name),
+            'IconPixmap': GLib.Variant('a(iiay)', self._icon_pixmap),
             'Menu': GLib.Variant('o', self._menu_path),
             'ItemIsMenu': GLib.Variant('b', False),
         }

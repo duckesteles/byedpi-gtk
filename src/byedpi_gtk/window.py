@@ -1,4 +1,6 @@
-from gi.repository import Adw, Gio, GLib, Gtk
+import os
+
+from gi.repository import Adw, Gio, GdkPixbuf, GLib, Gtk
 
 from . import ciadpi
 from .settings import SettingsDialog
@@ -130,12 +132,54 @@ class MainWindow(Adw.ApplicationWindow):
             return
         try:
             self._tray = TrayIcon(self.app.app_id, 'byedpi-gtk')
+            self._tray.set_icon_pixmap(self._load_icon_pixmaps())
             self._tray.connect('activate', lambda _t: self._toggle_window())
             self._tray.connect('menu-item', self._on_tray_menu)
             self._tray.start()
             self._refresh_tray_menu()
         except Exception:
             self._tray = None
+
+    def _load_icon_pixmaps(self):
+        icon_path = os.path.join(
+            os.path.dirname(self.app.pkgdatadir), 'icons', 'hicolor',
+            'scalable', 'apps', self.app.app_id + '.svg',
+        )
+        if not os.path.exists(icon_path):
+            return []
+        pixmaps = []
+        for size in (24, 48):
+            try:
+                pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_size(
+                    icon_path, size, size
+                )
+            except GLib.Error:
+                continue
+            pixmaps.append(self._pixbuf_to_argb(pixbuf))
+        return pixmaps
+
+    def _pixbuf_to_argb(self, pixbuf):
+        width = pixbuf.get_width()
+        height = pixbuf.get_height()
+        stride = pixbuf.get_rowstride()
+        channels = pixbuf.get_n_channels()
+        pixels = pixbuf.get_pixels()
+        argb = bytearray(width * height * 4)
+        out = 0
+        for y in range(height):
+            row = y * stride
+            for x in range(width):
+                pos = row + x * channels
+                red = pixels[pos]
+                green = pixels[pos + 1]
+                blue = pixels[pos + 2]
+                alpha = pixels[pos + 3] if channels == 4 else 255
+                argb[out] = alpha
+                argb[out + 1] = red
+                argb[out + 2] = green
+                argb[out + 3] = blue
+                out += 4
+        return (width, height, bytes(argb))
 
     def _refresh_tray_menu(self):
         if self._tray is None:
@@ -212,7 +256,7 @@ class MainWindow(Adw.ApplicationWindow):
             self._start_proxy()
 
     def _on_settings_clicked(self, button):
-        dialog = SettingsDialog(self.config, self.app.localedir, self.proxy)
+        dialog = SettingsDialog(self.config, self.app.localedir)
         self._settings_dialog = dialog
         dialog.connect('closed', self._on_settings_closed)
         dialog.present(self)
