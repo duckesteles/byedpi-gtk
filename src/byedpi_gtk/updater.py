@@ -1,3 +1,4 @@
+import hashlib
 import json
 import os
 import platform
@@ -9,9 +10,11 @@ from gi.repository import GLib, Gio, GObject
 
 APP_REPO = 'duckesteles/byedpi-gtk'
 BYEDPI_REPO = 'hufrea/byedpi'
-API_TEMPLATE = 'https://api.github.com/repos/{}/releases/latest'
-USER_AGENT = 'byedpi-gtk-updater'
+LATEST_TEMPLATE = 'https://api.github.com/repos/{}/releases/latest'
+TAG_TEMPLATE = 'https://api.github.com/repos/{}/releases/tags/{}'
+USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0'
 REQUEST_TIMEOUT = 15
+MAX_DOWNLOAD_BYTES = 64 * 1024 * 1024
 
 ARCH_MAP = {
     'x86_64': 'x86_64',
@@ -47,12 +50,18 @@ def read_installed_ciadpi_version():
         return None
 
 
-def _fetch_latest(repo):
-    request = urllib.request.Request(
-        API_TEMPLATE.format(repo), headers={'User-Agent': USER_AGENT}
-    )
+def _fetch_json(url):
+    request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
     with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
         return json.load(response)
+
+
+def _fetch_latest(repo):
+    return _fetch_json(LATEST_TEMPLATE.format(repo))
+
+
+def _fetch_release_by_tag(repo, tag):
+    return _fetch_json(TAG_TEMPLATE.format(repo, tag))
 
 
 def _normalize(tag):
@@ -79,14 +88,28 @@ def _pick_asset(assets, arch):
 
 
 def _download(url, destination):
+    if not url.lower().startswith('https://'):
+        raise ValueError('refusing non-HTTPS download URL')
     request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+    total = 0
     with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT) as response:
         with open(destination, 'wb') as handle:
             while True:
                 chunk = response.read(65536)
                 if not chunk:
                     break
+                total += len(chunk)
+                if total > MAX_DOWNLOAD_BYTES:
+                    raise ValueError('download exceeded size limit')
                 handle.write(chunk)
+
+
+def _sha256(path):
+    digest = hashlib.sha256()
+    with open(path, 'rb') as handle:
+        for chunk in iter(lambda: handle.read(65536), b''):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _extract_binary(archive_path, arch, destination):
@@ -106,6 +129,8 @@ def _extract_binary(archive_path, arch, destination):
             )
             if member is None:
                 raise FileNotFoundError(member_name)
+        if member.size > MAX_DOWNLOAD_BYTES:
+            raise ValueError('core binary exceeds size limit')
         with archive.extractfile(member) as source:
             payload = source.read()
     os.makedirs(os.path.dirname(destination), mode=0o700, exist_ok=True)
@@ -133,11 +158,23 @@ class Updater(GObject.Object):
         'finished': (GObject.SignalFlags.RUN_FIRST, None, (object,)),
     }
 
-    def __init__(self, app_version, check_app, check_ciadpi):
+    def __init__(self, app_version, check_app, check_ciadpi, pkgdatadir):
         super().__init__()
         self._app_version = app_version
         self._check_app = check_app
         self._check_ciadpi = check_ciadpi
+        self._pkgdatadir = pkgdatadir
+
+    def _load_manifest(self):
+        path = os.path.join(self._pkgdatadir, 'byedpi-upstream.json')
+        try:
+            with open(path, 'r', encoding='utf-8') as handle:
+                data = json.load(handle)
+        except (OSError, ValueError):
+            return None
+        if not isinstance(data, dict) or 'tag' not in data:
+            return None
+        return data
 
     def run_async(self):
         task = Gio.Task.new(self, None, self._on_done)
@@ -178,44 +215,54 @@ class Updater(GObject.Object):
         self._report(_('Checking byedpi core…'))
         arch = target_arch()
         result.ciadpi_installed = read_installed_ciadpi_version()
-        if arch is None:
+        manifest = self._load_manifest()
+        if arch is None or manifest is None:
+            self._warn_if_no_core(
+                result, _('No byedpi core build for this architecture.')
+            )
+            return
+        tag = manifest['tag']
+        pinned = _normalize(tag)
+        expected_sha = manifest.get('sha256', {}).get(arch)
+        result.ciadpi_latest = pinned
+        have_binary = os.access(_binary_path(), os.X_OK)
+        if have_binary and result.ciadpi_installed == pinned:
+            return
+        if not expected_sha:
             self._warn_if_no_core(
                 result, _('No byedpi core build for this architecture.')
             )
             return
         try:
-            data = _fetch_latest(BYEDPI_REPO)
+            release = _fetch_release_by_tag(BYEDPI_REPO, tag)
         except (urllib.error.URLError, OSError, ValueError):
             self._warn_if_no_core(
                 result, _('Could not download the byedpi core.')
             )
             return
-        latest = _normalize(data.get('tag_name'))
-        result.ciadpi_latest = latest
-        have_binary = os.access(_binary_path(), os.X_OK)
-        if have_binary and result.ciadpi_installed == latest:
-            return
-        asset = _pick_asset(data.get('assets', []), arch)
+        asset = _pick_asset(release.get('assets', []), arch)
         if asset is None:
             self._warn_if_no_core(
                 result, _('No byedpi core build for this architecture.')
             )
             return
-        self._report(_('Downloading byedpi core {}…').format(latest))
+        self._report(_('Downloading byedpi core {}…').format(pinned))
         try:
             with tempfile.TemporaryDirectory() as workdir:
                 archive = os.path.join(workdir, 'byedpi.tar.gz')
                 _download(asset['browser_download_url'], archive)
+                if _sha256(archive) != expected_sha:
+                    raise ValueError('byedpi core checksum mismatch')
                 _extract_binary(archive, arch, _binary_path())
         except (urllib.error.URLError, OSError, tarfile.TarError,
-                FileNotFoundError):
+                FileNotFoundError, ValueError):
             self._warn_if_no_core(
-                result, _('Could not download the byedpi core.')
+                result, _('Could not verify the byedpi core download.')
             )
             return
         with open(_version_state_path(), 'w', encoding='utf-8') as handle:
-            handle.write(latest or '')
-        result.ciadpi_installed = latest
+            handle.write(pinned)
+        result.ciadpi_installed = pinned
         result.ciadpi_installed_now = True
 
     def _on_done(self, source, task, data=None):

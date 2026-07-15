@@ -230,6 +230,7 @@ class MainWindow(Adw.ApplicationWindow):
             self.app.version,
             self.config.get('check_app_updates'),
             self.config.get('check_ciadpi_updates'),
+            self.app.pkgdatadir,
         )
         updater.connect('progress', self._on_update_progress)
         updater.connect('finished', self._on_update_finished)
