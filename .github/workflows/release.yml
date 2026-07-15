@@ -25,7 +25,7 @@ jobs:
           cache-key: flatpak-builder-${{ github.sha }}
 
       - name: Upload bundle
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: github.event_name == 'release'
         with:
           files: byedpi-gtk.flatpak
@@ -47,7 +47,7 @@ jobs:
         run: bash packaging/appimage/build.sh
 
       - name: Upload AppImage
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: github.event_name == 'release'
         with:
           files: byedpi-gtk-x86_64.AppImage
@@ -68,7 +68,7 @@ jobs:
         run: bash packaging/debian/build.sh
 
       - name: Upload deb
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: github.event_name == 'release'
         with:
           files: byedpi-gtk_*_amd64.deb
@@ -103,7 +103,7 @@ jobs:
           cp build-pacman/*.pkg.tar.zst .
 
       - name: Upload package
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         if: github.event_name == 'release'
         with:
           files: '*.pkg.tar.zst'
