@@ -56,12 +56,14 @@ paru -S byedpi-gtk
 
 ### AppImage
 
-Pick the build for your CPU (`x86_64` or `aarch64`):
+For x86_64 machines:
 
 ```sh
 chmod +x byedpi-gtk-x86_64.AppImage
 ./byedpi-gtk-x86_64.AppImage
 ```
+
+On ARM64 (aarch64) use the Flatpak, deb, or pacman package instead.
 
 ### Debian / Ubuntu
 
