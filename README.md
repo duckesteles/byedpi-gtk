@@ -8,28 +8,24 @@ no telemetry, built for every Linux distribution.
 
 </div>
 
-## Disclaimer
-
-byedpi-gtk is provided for **educational and research purposes only**. It is a
-graphical frontend for the independent [byedpi](https://github.com/hufrea/byedpi)
-project and does not host, provide, promote, or grant access to any specific
-website, service, or content.
-
-You are **solely responsible** for how you use this software and for ensuring
-that your use complies with all laws, regulations, and terms of service that
-apply in your country and jurisdiction. Laws regarding network tools and content
-access differ from place to place; it is your responsibility to know and follow
-the ones that apply to you.
-
-This software is provided "as is", **without any warranty of any kind**. To the
-fullest extent permitted by law, the author and contributors accept **no
-responsibility and no liability** for any use or misuse of this software, or for
-any direct or indirect damage, loss, or legal consequence arising from it. By
-downloading, installing, or using byedpi-gtk you agree that you do so entirely at
-your own risk and that you assume full responsibility for your actions.
-
-If you do not agree with these terms, do not download, install, or use this
-software.
+> [!CAUTION]
+> byedpi-gtk is provided for **educational and research purposes only**. It is a
+> graphical frontend for the independent
+> [byedpi](https://github.com/hufrea/byedpi) project and does not host, provide,
+> promote, or grant access to any specific website, service, or content.
+>
+> You are **solely responsible** for how you use this software and for ensuring
+> that your use complies with all laws, regulations, and terms of service that
+> apply in your country and jurisdiction. It is your responsibility to know and
+> follow the ones that apply to you.
+>
+> This software is provided "as is", **without any warranty of any kind**. To the
+> fullest extent permitted by law, the author and contributors accept **no
+> responsibility and no liability** for any use or misuse of this software, or for
+> any direct or indirect damage, loss, or legal consequence arising from it. By
+> downloading, installing, or using byedpi-gtk you agree that you do so entirely
+> at your own risk and that you assume full responsibility for your actions. If
+> you do not agree with these terms, do not download, install, or use it.
 
 ## Features
 
