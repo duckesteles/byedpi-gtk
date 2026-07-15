@@ -12,7 +12,7 @@ jobs:
   flatpak:
     runs-on: ubuntu-latest
     container:
-      image: bilelmoussaoui/flatpak-github-actions:gnome-48
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
       options: --privileged
     steps:
       - uses: actions/checkout@v7
@@ -87,6 +87,7 @@ jobs:
 
       - name: Stage local source tarball
         run: |
+          git config --global --add safe.directory "$PWD"
           PKGVER=$(sed -n "s/^pkgver=//p" packaging/aur/PKGBUILD)
           mkdir -p "build-pacman/byedpi-gtk-$PKGVER"
           git archive --format=tar HEAD | tar -x -C "build-pacman/byedpi-gtk-$PKGVER"
