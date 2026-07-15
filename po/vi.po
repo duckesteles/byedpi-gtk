@@ -154,3 +154,6 @@ msgstr "Kết nối thất bại"
 
 msgid "Disconnected"
 msgstr "Đã ngắt kết nối"
+
+msgid "Could not verify the byedpi core download."
+msgstr "Không thể xác minh bản tải lõi byedpi."

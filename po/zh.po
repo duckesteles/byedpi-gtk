@@ -154,3 +154,6 @@ msgstr "连接失败"
 
 msgid "Disconnected"
 msgstr "已断开"
+
+msgid "Could not verify the byedpi core download."
+msgstr "无法校验 byedpi 内核的下载。"

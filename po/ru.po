@@ -155,3 +155,6 @@ msgstr "Не удалось подключиться"
 
 msgid "Disconnected"
 msgstr "Отключено"
+
+msgid "Could not verify the byedpi core download."
+msgstr "Не удалось проверить загрузку ядра byedpi."

@@ -154,3 +154,6 @@ msgstr "اتصال ناموفق بود"
 
 msgid "Disconnected"
 msgstr "قطع شد"
+
+msgid "Could not verify the byedpi core download."
+msgstr "بررسی صحت دانلود هستهٔ byedpi ممکن نشد."

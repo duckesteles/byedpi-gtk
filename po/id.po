@@ -154,3 +154,6 @@ msgstr "Sambungan gagal"
 
 msgid "Disconnected"
 msgstr "Terputus"
+
+msgid "Could not verify the byedpi core download."
+msgstr "Tidak dapat memverifikasi unduhan inti byedpi."

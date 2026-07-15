@@ -210,3 +210,6 @@ msgstr "Bağlantı başarısız"
 #: src/byedpi_gtk/window.py:309
 msgid "Disconnected"
 msgstr "Bağlantı kesildi"
+
+msgid "Could not verify the byedpi core download."
+msgstr "byedpi çekirdeği indirmesi doğrulanamadı."

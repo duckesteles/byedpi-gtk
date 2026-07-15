@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: byedpi-gtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-15 17:45+0300\n"
+"POT-Creation-Date: 2026-07-15 18:47+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgid "Timed out waiting for proxy port"
 msgstr ""
 
 #: src/byedpi_gtk/settings.py:16 src/byedpi_gtk/window.py:71
-#: src/byedpi_gtk/window.py:324
+#: src/byedpi_gtk/window.py:325
 msgid "Settings"
 msgstr ""
 
@@ -127,32 +127,37 @@ msgstr ""
 msgid "Downloads the matching build from the byedpi project."
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:161
+#: src/byedpi_gtk/updater.py:198
 msgid "Checking for application updates…"
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:178
+#: src/byedpi_gtk/updater.py:215
 msgid "Checking byedpi core…"
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:183 src/byedpi_gtk/updater.py:201
+#: src/byedpi_gtk/updater.py:221 src/byedpi_gtk/updater.py:233
+#: src/byedpi_gtk/updater.py:246
 msgid "No byedpi core build for this architecture."
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:190 src/byedpi_gtk/updater.py:213
+#: src/byedpi_gtk/updater.py:240
 msgid "Could not download the byedpi core."
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:204
+#: src/byedpi_gtk/updater.py:249
 #, python-brace-format
 msgid "Downloading byedpi core {}…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:53 src/byedpi_gtk/window.py:321
+#: src/byedpi_gtk/updater.py:260
+msgid "Could not verify the byedpi core download."
+msgstr ""
+
+#: src/byedpi_gtk/window.py:53 src/byedpi_gtk/window.py:322
 msgid "Starting…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:66 src/byedpi_gtk/window.py:322
+#: src/byedpi_gtk/window.py:66 src/byedpi_gtk/window.py:323
 msgid "Main Menu"
 msgstr ""
 
@@ -172,45 +177,45 @@ msgstr ""
 msgid "Show"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:197 src/byedpi_gtk/window.py:297
+#: src/byedpi_gtk/window.py:197 src/byedpi_gtk/window.py:298
 msgid "Disconnect"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:197 src/byedpi_gtk/window.py:292
-#: src/byedpi_gtk/window.py:314
+#: src/byedpi_gtk/window.py:197 src/byedpi_gtk/window.py:293
+#: src/byedpi_gtk/window.py:315
 msgid "Connect"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:247
+#: src/byedpi_gtk/window.py:248
 #, python-brace-format
 msgid "A new version of byedpi-gtk is available: {}"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:253
+#: src/byedpi_gtk/window.py:254
 #, python-brace-format
 msgid "byedpi core updated to {}"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:285
+#: src/byedpi_gtk/window.py:286
 msgid "Could not start the proxy. Check the settings."
 msgstr ""
 
-#: src/byedpi_gtk/window.py:290
+#: src/byedpi_gtk/window.py:291
 msgid "Connecting…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:295
+#: src/byedpi_gtk/window.py:296
 msgid "Connected"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:302
+#: src/byedpi_gtk/window.py:303
 msgid "Disconnecting…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:305
+#: src/byedpi_gtk/window.py:306
 msgid "Connection failed"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:309
+#: src/byedpi_gtk/window.py:310
 msgid "Disconnected"
 msgstr ""
