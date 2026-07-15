@@ -45,7 +45,7 @@ class SettingsDialog(Adw.PreferencesDialog):
             if code == 'system':
                 labels.append(_('Follow system'))
             else:
-                labels.append(i18n.LANGUAGE_LABELS.get(code, code))
+                labels.append(i18n.language_label(code))
         lang_row.set_model(Gtk.StringList.new(labels))
         current = self.config.get('language')
         lang_row.set_selected(

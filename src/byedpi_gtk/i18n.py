@@ -4,17 +4,48 @@ import os
 
 DOMAIN = 'byedpi-gtk'
 
-LANGUAGES = {
-    'system': None,
-    'en': 'en',
-    'tr': 'tr',
+ENDONYMS = {
+    'ar': 'العربية',
+    'az': 'Azərbaycanca',
+    'be': 'Беларуская',
+    'bg': 'Български',
+    'bn': 'বাংলা',
+    'cs': 'Čeština',
+    'da': 'Dansk',
+    'de': 'Deutsch',
+    'el': 'Ελληνικά',
+    'en': 'English',
+    'es': 'Español',
+    'fa': 'فارسی',
+    'fi': 'Suomi',
+    'fr': 'Français',
+    'he': 'עברית',
+    'hi': 'हिन्दी',
+    'hu': 'Magyar',
+    'id': 'Bahasa Indonesia',
+    'it': 'Italiano',
+    'ja': '日本語',
+    'ka': 'ქართული',
+    'ko': '한국어',
+    'nl': 'Nederlands',
+    'pl': 'Polski',
+    'pt': 'Português',
+    'pt_BR': 'Português (Brasil)',
+    'ro': 'Română',
+    'ru': 'Русский',
+    'sr': 'Српски',
+    'sv': 'Svenska',
+    'tr': 'Türkçe',
+    'uk': 'Українська',
+    'vi': 'Tiếng Việt',
+    'zh': '中文',
+    'zh_CN': '简体中文',
+    'zh_TW': '繁體中文',
 }
 
-LANGUAGE_LABELS = {
-    'system': None,
-    'en': 'English',
-    'tr': 'Türkçe',
-}
+
+def language_label(code):
+    return ENDONYMS.get(code, ENDONYMS.get(code.split('_')[0], code))
 
 
 def available_languages(localedir):
