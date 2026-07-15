@@ -30,6 +30,11 @@
     <category>Security</category>
   </categories>
   <releases>
+    <release version="1.0.4" date="2026-07-15">
+      <description>
+        <p>Fixed the window not reappearing after being closed to the tray, and closing now quits by default.</p>
+      </description>
+    </release>
     <release version="1.0.3" date="2026-07-15">
       <description>
         <p>Added a system tray icon, instant language switching, and a log viewer in settings. Update checks now fail quietly.</p>
