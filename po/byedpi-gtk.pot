@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: byedpi-gtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-07-15 15:12+0300\n"
+"POT-Creation-Date: 2026-07-15 16:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,187 +17,208 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/byedpi_gtk/ciadpi.py:63
+#: src/byedpi_gtk/ciadpi.py:91
 msgid "ciadpi binary not found"
 msgstr ""
 
-#: src/byedpi_gtk/ciadpi.py:72
+#: src/byedpi_gtk/ciadpi.py:100
 #, python-brace-format
 msgid "Invalid arguments: {}"
 msgstr ""
 
-#: src/byedpi_gtk/ciadpi.py:124
+#: src/byedpi_gtk/ciadpi.py:152
 msgid "Timed out waiting for proxy port"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:8 src/byedpi_gtk/window.py:63
+#: src/byedpi_gtk/settings.py:20 src/byedpi_gtk/window.py:65
+#: src/byedpi_gtk/window.py:273
 msgid "Settings"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:20
+#: src/byedpi_gtk/settings.py:43
 msgid "Appearance"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:22
+#: src/byedpi_gtk/settings.py:45
 msgid "Theme"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:25 src/byedpi_gtk/settings.py:46
+#: src/byedpi_gtk/settings.py:48 src/byedpi_gtk/settings.py:69
 msgid "Follow system"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:25
+#: src/byedpi_gtk/settings.py:48
 msgid "Light"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:25
+#: src/byedpi_gtk/settings.py:48
 msgid "Dark"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:42
+#: src/byedpi_gtk/settings.py:65
 msgid "Language"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:54
-msgid "Restart to fully apply a new language."
-msgstr ""
-
-#: src/byedpi_gtk/settings.py:66
+#: src/byedpi_gtk/settings.py:88
 msgid "Proxy"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:67
+#: src/byedpi_gtk/settings.py:89
 msgid "Local SOCKS5 endpoint exposed by byedpi."
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:70
+#: src/byedpi_gtk/settings.py:92
 msgid "Listen address"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:79
+#: src/byedpi_gtk/settings.py:101
 msgid "Port"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:89
+#: src/byedpi_gtk/settings.py:111
 msgid "byedpi arguments"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:98
+#: src/byedpi_gtk/settings.py:121
+msgid "Behavior"
+msgstr ""
+
+#: src/byedpi_gtk/settings.py:124
 msgid "Connect on launch"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:99
+#: src/byedpi_gtk/settings.py:125
 msgid "Start the proxy automatically when the app opens."
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:113
+#: src/byedpi_gtk/settings.py:137
+msgid "Show tray icon"
+msgstr ""
+
+#: src/byedpi_gtk/settings.py:138
+msgid "Requires a restart to take effect."
+msgstr ""
+
+#: src/byedpi_gtk/settings.py:148
+msgid "Close to tray"
+msgstr ""
+
+#: src/byedpi_gtk/settings.py:149
+msgid "Keep running in the tray when the window is closed."
+msgstr ""
+
+#: src/byedpi_gtk/settings.py:161
 msgid "Updates"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:115
+#: src/byedpi_gtk/settings.py:163
 msgid "Checks run at startup over HTTPS. Nothing else is sent."
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:120
+#: src/byedpi_gtk/settings.py:167
 msgid "Check for application updates"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:132
+#: src/byedpi_gtk/settings.py:178
 msgid "Keep byedpi core up to date"
 msgstr ""
 
-#: src/byedpi_gtk/settings.py:133
+#: src/byedpi_gtk/settings.py:179
 msgid "Downloads the matching build from the byedpi project."
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:155
+#: src/byedpi_gtk/settings.py:192
+msgid "Logs"
+msgstr ""
+
+#: src/byedpi_gtk/settings.py:196
+msgid "Clear logs"
+msgstr ""
+
+#: src/byedpi_gtk/updater.py:161
 msgid "Checking for application updates…"
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:159
-msgid "Could not check application updates."
-msgstr ""
-
-#: src/byedpi_gtk/updater.py:169
+#: src/byedpi_gtk/updater.py:178
 msgid "Checking byedpi core…"
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:174
-msgid "Unsupported architecture for automatic core updates."
-msgstr ""
-
-#: src/byedpi_gtk/updater.py:180
-msgid "Could not check byedpi core updates."
-msgstr ""
-
-#: src/byedpi_gtk/updater.py:190
+#: src/byedpi_gtk/updater.py:183 src/byedpi_gtk/updater.py:201
 msgid "No byedpi core build for this architecture."
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:193
+#: src/byedpi_gtk/updater.py:190 src/byedpi_gtk/updater.py:213
+msgid "Could not download the byedpi core."
+msgstr ""
+
+#: src/byedpi_gtk/updater.py:204
 #, python-brace-format
 msgid "Downloading byedpi core {}…"
 msgstr ""
 
-#: src/byedpi_gtk/updater.py:202
-#, python-brace-format
-msgid "Failed to install byedpi core: {}"
-msgstr ""
-
-#: src/byedpi_gtk/window.py:42
+#: src/byedpi_gtk/window.py:47 src/byedpi_gtk/window.py:270
 msgid "Starting…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:54
-msgid "About byedpi-gtk"
-msgstr ""
-
-#: src/byedpi_gtk/window.py:55
-msgid "Quit"
-msgstr ""
-
-#: src/byedpi_gtk/window.py:59
+#: src/byedpi_gtk/window.py:60 src/byedpi_gtk/window.py:271
 msgid "Main Menu"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:87 src/byedpi_gtk/window.py:188
-msgid "Disconnected"
+#: src/byedpi_gtk/window.py:113
+msgid "About byedpi-gtk"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:94 src/byedpi_gtk/window.py:193
+#: src/byedpi_gtk/window.py:114 src/byedpi_gtk/window.py:150
+msgid "Quit"
+msgstr ""
+
+#: src/byedpi_gtk/window.py:141
+msgid "Hide"
+msgstr ""
+
+#: src/byedpi_gtk/window.py:141
+msgid "Show"
+msgstr ""
+
+#: src/byedpi_gtk/window.py:146 src/byedpi_gtk/window.py:246
+msgid "Disconnect"
+msgstr ""
+
+#: src/byedpi_gtk/window.py:146 src/byedpi_gtk/window.py:241
+#: src/byedpi_gtk/window.py:263
 msgid "Connect"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:135
+#: src/byedpi_gtk/window.py:196
 #, python-brace-format
 msgid "A new version of byedpi-gtk is available: {}"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:141
+#: src/byedpi_gtk/window.py:202
 #, python-brace-format
 msgid "byedpi core updated to {}"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:167
+#: src/byedpi_gtk/window.py:234
+msgid "Could not start the proxy. Check the settings."
+msgstr ""
+
+#: src/byedpi_gtk/window.py:239
 msgid "Connecting…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:171
+#: src/byedpi_gtk/window.py:244
 msgid "Connected"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:175
-msgid "Disconnect"
-msgstr ""
-
-#: src/byedpi_gtk/window.py:180
+#: src/byedpi_gtk/window.py:251
 msgid "Disconnecting…"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:183
+#: src/byedpi_gtk/window.py:254
 msgid "Connection failed"
 msgstr ""
 
-#: src/byedpi_gtk/window.py:186
-msgid "Could not start the proxy. Check the settings."
+#: src/byedpi_gtk/window.py:258
+msgid "Disconnected"
 msgstr ""

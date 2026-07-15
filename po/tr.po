@@ -145,3 +145,33 @@ msgstr "Bağlantı başarısız"
 
 msgid "Could not start the proxy. Check the settings."
 msgstr "Proxy başlatılamadı. Ayarları denetleyin."
+
+msgid "Behavior"
+msgstr "Davranış"
+
+msgid "Show tray icon"
+msgstr "Tepsi ikonunu göster"
+
+msgid "Requires a restart to take effect."
+msgstr "Etkili olması için yeniden başlatma gerekir."
+
+msgid "Close to tray"
+msgstr "Tepsiye küçült"
+
+msgid "Keep running in the tray when the window is closed."
+msgstr "Pencere kapatıldığında tepside çalışmaya devam et."
+
+msgid "Logs"
+msgstr "Günlükler"
+
+msgid "Clear logs"
+msgstr "Günlükleri temizle"
+
+msgid "Show"
+msgstr "Göster"
+
+msgid "Hide"
+msgstr "Gizle"
+
+msgid "Could not download the byedpi core."
+msgstr "byedpi çekirdeği indirilemedi."
