@@ -30,6 +30,11 @@
     <category>Security</category>
   </categories>
   <releases>
+    <release version="1.0.5" date="2026-07-15">
+      <description>
+        <p>Fixed a missing module that prevented the app from starting in the packaged builds.</p>
+      </description>
+    </release>
     <release version="1.0.4" date="2026-07-15">
       <description>
         <p>Fixed the window not reappearing after being closed to the tray, and closing now quits by default.</p>
