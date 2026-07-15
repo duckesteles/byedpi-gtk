@@ -4,6 +4,8 @@ import os
 
 DOMAIN = 'byedpi-gtk'
 
+_ORIGINAL_LANGUAGE = os.environ.get('LANGUAGE')
+
 ENDONYMS = {
     'ar': 'العربية',
     'az': 'Azərbaycanca',
@@ -62,6 +64,11 @@ def setup(localedir, override):
     languages = None
     if override and override != 'system':
         languages = [override]
+        os.environ['LANGUAGE'] = override
+    elif _ORIGINAL_LANGUAGE is None:
+        os.environ.pop('LANGUAGE', None)
+    else:
+        os.environ['LANGUAGE'] = _ORIGINAL_LANGUAGE
     try:
         locale.setlocale(locale.LC_ALL, '')
     except locale.Error:
