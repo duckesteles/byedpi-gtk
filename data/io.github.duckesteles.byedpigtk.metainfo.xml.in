@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.duckesteles.byedpigtk</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>byedpi-gtk</name>
+  <summary>Bypass DPI restrictions with a local SOCKS proxy</summary>
+  <description>
+    <p>
+      byedpi-gtk is a graphical frontend for byedpi, a tool that circumvents
+      deep packet inspection. It runs a local SOCKS5 proxy with one click, keeps
+      the byedpi core up to date, and never collects any data.
+    </p>
+    <ul>
+      <li>One-click connect and disconnect</li>
+      <li>Automatic byedpi core updates</li>
+      <li>Configurable byedpi arguments</li>
+      <li>Follows the system light or dark theme</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github.duckesteles.byedpigtk.desktop</launchable>
+  <url type="homepage">https://github.com/duckesteles/byedpi-gtk</url>
+  <url type="bugtracker">https://github.com/duckesteles/byedpi-gtk/issues</url>
+  <developer id="io.github.duckesteles">
+    <name>duckesteles</name>
+  </developer>
+  <content_rating type="oars-1.1"/>
+  <categories>
+    <category>Network</category>
+    <category>Security</category>
+  </categories>
+  <releases>
+    <release version="0.1.0" date="2026-07-15">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+</component>

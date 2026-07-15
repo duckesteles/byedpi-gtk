@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=byedpi-gtk
+GenericName=DPI Circumvention
+Comment=Manage a local byedpi SOCKS proxy to bypass DPI restrictions
+Exec=@BINDIR@/byedpi-gtk
+Icon=io.github.duckesteles.byedpigtk
+Terminal=false
+Type=Application
+Categories=Network;GTK;Security;
+Keywords=dpi;proxy;socks;byedpi;ciadpi;censorship;
+StartupNotify=true
