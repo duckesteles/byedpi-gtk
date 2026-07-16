@@ -265,7 +265,8 @@ class TrayIcon(GObject.Object):
                 GLib.Variant('s', ''),
             )))
         elif method == 'Event':
-            item_id, event_id = params.unpack()[0], params.unpack()[1]
+            values = params.unpack()
+            item_id, event_id = values[0], values[1]
             if event_id == 'clicked':
                 for item in self._items:
                     if item['id'] == item_id and 'action' in item:
