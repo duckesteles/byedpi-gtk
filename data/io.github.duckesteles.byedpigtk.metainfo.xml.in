@@ -30,6 +30,11 @@
     <category>Security</category>
   </categories>
   <releases>
+    <release version="1.0.8" date="2026-07-16">
+      <description>
+        <p>The byedpi core now updates itself to the latest upstream release automatically, and language switching is more robust.</p>
+      </description>
+    </release>
     <release version="1.0.7" date="2026-07-15">
       <description>
         <p>Verify the byedpi core download against a pinned checksum, and make the About dialog follow the chosen language.</p>
