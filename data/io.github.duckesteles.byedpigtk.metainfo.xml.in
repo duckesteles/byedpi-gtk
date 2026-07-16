@@ -30,6 +30,11 @@
     <category>Security</category>
   </categories>
   <releases>
+    <release version="1.1.0" date="2026-07-16">
+      <description>
+        <p>Settings keep working even when the config cannot be saved, plus the startup, connection and browser-setup improvements from recent releases.</p>
+      </description>
+    </release>
     <release version="1.0.9" date="2026-07-16">
       <description>
         <p>Faster startup that no longer stalls on a slow network, clearer connection failures, and various robustness fixes.</p>
