@@ -1,6 +1,6 @@
 project(
   'byedpi-gtk',
-  version: '1.0.7',
+  version: '1.0.8',
   license: 'GPL-3.0-or-later',
   meson_version: '>= 0.62.0',
 )
@@ -20,8 +20,6 @@ datadir = get_option('datadir')
 localedir = get_option('localedir')
 pkgdatadir = datadir / meson.project_name()
 moduledir = python.get_install_dir() / 'byedpi_gtk'
-
-install_data('packaging/byedpi-upstream.json', install_dir: pkgdatadir)
 
 subdir('src')
 subdir('data')
