@@ -73,5 +73,8 @@ class Config(GObject.Object):
         if self._data.get(key) == value:
             return
         self._data[key] = value
-        self._save()
+        try:
+            self._save()
+        except OSError:
+            pass
         self.emit('changed', key)
