@@ -7,8 +7,8 @@ project(
 
 app_id = 'io.github.duckesteles.byedpigtk'
 
-dependency('gtk4', version: '>= 4.10')
-dependency('libadwaita-1', version: '>= 1.4')
+dependency('gtk4', version: '>= 4.16')
+dependency('libadwaita-1', version: '>= 1.6')
 dependency('pygobject-3.0', version: '>= 3.44', required: false)
 
 python = import('python').find_installation('python3')
