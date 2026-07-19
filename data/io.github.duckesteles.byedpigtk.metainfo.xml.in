@@ -30,6 +30,11 @@
     <category>Security</category>
   </categories>
   <releases>
+    <release version="1.1.1" date="2026-07-18">
+      <description>
+        <p>Updated the Flatpak build to the current GNOME 50 runtime.</p>
+      </description>
+    </release>
     <release version="1.1.0" date="2026-07-16">
       <description>
         <p>Settings keep working even when the config cannot be saved, plus the startup, connection and browser-setup improvements from recent releases.</p>
