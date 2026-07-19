@@ -51,7 +51,8 @@ class MainWindow(Adw.ApplicationWindow):
             spacing=18,
             halign=Gtk.Align.CENTER,
         )
-        self._loading_spinner = Adw.Spinner(width_request=32, height_request=32)
+        self._loading_spinner = Gtk.Spinner(width_request=32, height_request=32)
+        self._loading_spinner.start()
         self._loading_label = Gtk.Label(label=_('Starting…'))
         self._loading_label.add_css_class('dim-label')
         box.append(self._loading_spinner)
