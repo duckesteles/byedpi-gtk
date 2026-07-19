@@ -20,7 +20,7 @@ jobs:
             arch: aarch64
     runs-on: ${{ matrix.runner }}
     container:
-      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-48
+      image: ghcr.io/flathub-infra/flatpak-github-actions:gnome-50
       options: --privileged
     steps:
       - uses: actions/checkout@v7
